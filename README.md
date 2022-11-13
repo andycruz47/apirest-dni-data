@@ -4,7 +4,6 @@
 
 ```
 git clone
-cd nodejs-mysql-restapi
 docker-compose up
 npm install
 npm run dev
