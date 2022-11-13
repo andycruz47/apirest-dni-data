@@ -13,7 +13,7 @@ const router = Router();
 router.get("/persons", getpersons);
 
 // GET An person
-router.get("/person/:id", getperson);
+router.get("/person/firstname/:firstname/lastname/:lastname", getperson);
 
 // DELETE An person
 router.delete("/person/:id", deleteperson);
