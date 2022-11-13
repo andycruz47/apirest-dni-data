@@ -1,0 +1,23 @@
+### get persons
+GET http://localhost:3000/api/persons
+
+###
+POST http://localhost:3000/api/persons
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "salary": 1000
+}
+
+### Get person by id
+GET http://localhost:3000/api/person/2
+
+### Update an person
+PATCH http://localhost:3000/api/person/2
+Content-Type: application/json
+
+{
+  "name": "Ryan Ray",
+  "salary": 500
+}
