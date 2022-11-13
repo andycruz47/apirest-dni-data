@@ -6,7 +6,7 @@ POST http://localhost:3000/api/persons
 Content-Type: application/json
 
 ### Get person by firstname and lastname
-GET http://localhost:3000/api/person/firstname/david/lastname/aguilar
+GET http://localhost:3000/api/person/firstname/andy/lastname/cruz
 
 ### Update an person
 PATCH http://localhost:3000/api/person/2

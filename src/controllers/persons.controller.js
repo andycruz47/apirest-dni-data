@@ -12,8 +12,7 @@ export const getpersons = async (req, res) => {
 export const getperson = async (req, res) => {
   try {
     const { firstname,lastname } = req.params;
-    console.log(req.params)
-    const [rows] = await pool.query("SELECT * FROM persona WHERE upper(nombres) like concat('%',?,'%') and upper(apellidos) like concat('%',?,'%')", [firstname,lastname]);
+    const [rows] = await pool.query("SELECT dni,digVerif,nombres,apellidos,date_format(fechNac,'%d/%m/%Y') as fechNac,fb,csexo,direccion,cdistrito,foto FROM persona WHERE upper(nombres) like concat('%',?,'%') and upper(apellidos) like concat('%',?,'%')", [firstname,lastname]);
 
     if (rows.length <= 0) {
       return res.status(404).json({ message: "person not found" });
